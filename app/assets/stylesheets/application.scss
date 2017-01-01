@@ -1,0 +1,60 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take recedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "materialize/components/color";
+
+$primary-color: color("grey", "lighten-5") !default;
+$font-color: color("blue","darken-1") !default;
+$secondary-color: color("blue", "base") !default;
+$social-icon-size: 35px;
+
+@import "materialize";
+@import "social-share-button";
+
+body{
+	background-color: whitespace;
+}
+.logo{
+	font-family: 'Oleo Script', cursive;
+	font-size: 35px;
+	margin-left: 20px;
+}
+
+.tabs .indicator {
+    background-color: $primary-color !important;
+}
+
+.gravatar{
+	height: 64px;
+	width: 64px;
+}
+
+#dropdown1{
+	li{
+		text-transform: capitalize;
+	}
+}
+
+.pagination a li.active {
+  color: $font-color;
+}
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $social-icon-size $social-icon-size;
+    height: $social-icon-size;
+    width: $social-icon-size;
+  }
+}

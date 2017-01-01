@@ -1,0 +1,18 @@
+<%= form_for @category do |f| %>
+	<div id="modalCategory" class="modal">
+		<div class="modal-content">
+			<i class="material-icons" style="float: left; margin-right: 20px;">mode_edit</i>
+			<h5>Add Category</h5>
+			<div class="input-field col s6">
+				<!-- <input id="icon_prefix" type="text" class="validate"> -->
+				<%= f.text_field(:categoryName, :class => 'validate', :id => 'icon_prefix', :type => 'text') %>
+				<%= f.hidden_field :user_id, :value => current_user.id %>
+				<label for="icon_prefix">Add your category here..</label>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<%= f.submit('Add to list', :class => 'waves-effect waves-light btn-flat modal-close') %>
+			<a class="waves-effect waves-light btn-flat modal-action modal-close">Cancel</a>
+		</div>
+	</div>
+<% end %>

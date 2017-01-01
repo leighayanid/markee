@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Markee</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'%>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= render('layouts/navbar')%>
+        <% if notice %>
+          <script type="text/javascript">
+            Materialize.toast('<%= notice %>', 3000, 'rounded')
+          </script>
+        <% end %>
+
+        <% if alert %>
+          <script type="text/javascript">
+            Materialize.toast('<%= alert %>', 3000, 'rounded')
+          </script>
+        <% end %>
+
+    <div style="margin-top: 10px;">
+        <%= yield %>
+    </div>
+
+  </body>
+</html>

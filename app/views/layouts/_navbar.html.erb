@@ -1,0 +1,19 @@
+ <nav class="z-depth-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><%= link_to("Markee", "/", :class => 'blue-text lighten-1 logo', data: {turbolinks: 'false'}) %></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if user_signed_in? %>
+        <li><%= link_to("Browse by category", browse_path, data:{ turbolinks: 'false'}, :class => 'black-text lighten-2') %></li>
+        <li><a class="dropdown-button" data-activates='dropdown1'><i class=" large material-icons blue-text">arrow_drop_down</i></a></li>
+        <li><%= image_tag current_user.gravatar_url(:default => 'retro'), :class => 'gravatar' %></li>
+           <ul id='dropdown1' class='dropdown-content'>  
+            <li><%= link_to 'Edit profile', edit_user_registration_path, data:{turbolinks: 'false'} %></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete, data:{turbolinks: 'false'} %></li>
+           </ul>
+        <% else %>
+          <li><%= link_to "Sign up", new_user_registration_path, :class => 'black-text lighten-2' %></li>
+          <li><%= link_to "Login", new_user_session_path, :class => 'black-text lighten-2' %></li>
+        <% end %>
+      </ul>
+    </div>
+ </nav>

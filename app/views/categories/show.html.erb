@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="col s8">	
+	  <ul class="collection with-header">
+	    <li class="collection-header grey lighten-5"><h6><%= @category.categoryName %></h6></li>
+		    <% @links.each do |link| %>
+				 <li class="collection-item">
+				 	<div class="row" style="margin: 0px 0px;">
+				 		<div class="col s7">
+				 			<h6><%= link.title %></h6>
+					 		<small class="grey-text darken-1"><%= truncate(link.link, :length => 90) %></small></br>
+							
+					 	</div>	
+				 		<div class="col s4 valign center link-icon">
+					 		<small class="grey-text lighten-3">Added on <%= link.created_at.to_s(:long)%></small>
+				 		</div>
+				 		<div class="col s1 valign center">
+					 		<%= link_to '<i class="material-icons link-icon">link</i>'.html_safe, url_with_protocol(link.link), :target => '_blank' %>
+				 		</div>
+				 	</div>
+				 </li>
+		    <% end %>
+	  </ul>  <!-- end of collection with-header -->    
+	  <%= will_paginate @links, data:{turbolinks: 'false'} %>    
+	</div><!-- end of col s8 --> 
+</div><!-- end of row-->

@@ -1,0 +1,14 @@
+<ul class="collection with-header">
+	<li class="collection-header grey lighten-5">Categories</li>
+			<ul class="collapsible" data-collapsible="accordion">
+				<% @categories.each do |category| %>
+					<li>
+					<div class="collapsible-header"><i class="material-icons">folder</i><%= category.categoryName %></div>
+					<div class="collapsible-body"><p><%= link_to("Browse", "", data:{turbolinks: 'false'} ) %></p></div>
+					</li>
+				<% end %>
+			</ul>
+		<a class="waves-effsect waves-light btn col s12" href="#modalCategory"  >Add Category</a>
+</ul>
+
+<%= render('pages/addcategory') %>

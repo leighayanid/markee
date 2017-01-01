@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col s8 offset-s2">
+        <div class="card">
+            <div class="card-content">
+                <%= social_share_button_tag(@link.title)%>
+                <%= form_for @link do |f| %>
+                    <div class="input-field"> 
+                        <div class="form-group">
+                            <h5><%= @link.title%></h5>
+                            <%= f.text_field :link, :class => 'form-control'%>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <%= link_to "Visit", url_with_protocol(@link.link), :class => 'waves-effect waves-teal btn blue lighten-1',:target => '_blank' %>
+                        <%= link_to "Delete", link_path(@link.id), :method => :delete,  :class => 'waves-effect waves-teal btn red lighten-1'%>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
