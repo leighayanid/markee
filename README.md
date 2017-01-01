@@ -32,6 +32,6 @@ Once the dependencies are installed, you can run  `rails s` to start the applica
 ---
 
 ## License
->You can check out the full license [here](https://github.com/leighayanid/markee/blob/master/LICENSE)
+>You can check out the full license [here](https://github.com/leighayanid/markee/blob/master/LICENSE.md)
 
 This project is licensed under the terms of the **MIT** license.
