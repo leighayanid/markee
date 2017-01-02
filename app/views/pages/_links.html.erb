@@ -4,7 +4,7 @@
 			 <li class="collection-item">
 			 	<div class="row" style="margin: 0px 0px;">
 			 		<div class="col s7">
-			 			<h6><%= link_to(link.title, link_path(link.id)) %></h6>
+			 			<h6><%= link_to( truncate(link.title, :length => 90), link_path(link.id)) %></h6>
 				 		<small class="grey-text darken-1"><%= truncate(link.link, :length => 90) %></small></br>
 						
 				 	</div>	
