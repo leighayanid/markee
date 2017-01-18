@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'pages#index'
+  get 'welcome/index'
+
+  root 'welcome#index'
   get 'pages/categories'
   get 'browse', :to => 'pages#categories'
   get 'pages/explore'
