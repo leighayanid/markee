@@ -22,5 +22,9 @@ Rails.application.routes.draw do
   resources :profiles, only: [:edit]
   
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}
+
+  authenticated :user do
+    root 'pages#index', as: authenticated_user
+  end
   
 end
