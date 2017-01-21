@@ -17,4 +17,5 @@
 //= require turbolinks
 //= require materialize-sprockets
 //= require social-share-button
+//= require typed
 
