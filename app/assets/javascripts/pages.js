@@ -5,10 +5,14 @@ $(document).ready(function(){
 	$('select').material_select();
 	$('ul.tabs').tabs();
 	$('ul.editRegistrationTabs').tabs();
+  $(".element").typed({
+    strings: ["Save your bookmarks.","And access them anywhere.", "Try it now. It's free!"],
+    typeSpeed: 60, 
+    backDelay: 750,
+    loop: true,
+    loopCount: false,
+    contentType: 'text',
+    callback: function() {}
+  });
 
-	$("#test").typed({
-	        strings: ["First sentence.", "Second sentence."],
-	        typeSpeed: 5
-	});
-	
 });
