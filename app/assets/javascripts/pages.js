@@ -6,7 +6,7 @@ $(document).ready(function(){
 	$('ul.tabs').tabs();
 	$('ul.editRegistrationTabs').tabs();
   $(".element").typed({
-    strings: ["Save your bookmarks.","And access them anywhere.", "Try it now. It's free!"],
+    strings: ["I store your bookmarks.","Yes! Your bookmarks.","So you can access them anywhere.", "Try it now. It's free!"],
     typeSpeed: 60, 
     backDelay: 750,
     loop: true,
