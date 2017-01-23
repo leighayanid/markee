@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$font-russo: 'Russo One', sans-serif;
+$font-size-1: 5em;
+$font-size-2: 3em;
+$padding-1: 25%;
+
 .landing{
 	content: ' ';
   display: block;
@@ -21,12 +26,15 @@
   background-size: cover;
 
   h2{
-  	padding-top: 25%;
+  	padding-top: $padding-1;
+    font-family: $font-russo;
+    font-size: $font-size-1;
   }
 
   .element{
     display: inline;
-    font-size: 40px;
+    font-size: $font-size-2;
+    font-family: $font-russo;
   }
 
   .typed-cursor{
@@ -36,6 +44,7 @@
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
   }
+
   @keyframes blink{
       0% { opacity:1; }
       50% { opacity:0; }
@@ -53,12 +62,10 @@
   }
 
   .btn{
-
+    margin: 20px 8px 0px 8px;
+    background-color: white;
+    color: #1E1515;
+    width: 150px;
   }
 
-}
-
-.featurette{
-  height: 250px;
-  background-color: #4F4C4C;
 }
