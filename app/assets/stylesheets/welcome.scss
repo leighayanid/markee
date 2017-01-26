@@ -1,77 +1,85 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com///google fonts
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
 
-$font-russo: 'Russo One', sans-serif;
+$font-russo: 'Russo One',
+sans-serif;
 $font-size-1: 5em;
 $font-size-2: 3em;
 $padding-1: 25%;
 
-.landing{
-	content: ' ';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -9999;
-  background-image: image-url('background1.png');
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-
-  h2{
-  	padding-top: $padding-1;
-    font-family: $font-russo;
-    font-size: $font-size-1;
-  }
-<<<<<<< HEAD
-=======
-
-  .element{
-    display: inline;
-    font-size: $font-size-2;
-    font-family: $font-russo;
-  }
-
-  .typed-cursor{
-    font-size: 40px;
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-  }
-
-  @keyframes blink{
-      0% { opacity:1; }
-      50% { opacity:0; }
-      100% { opacity:1; }
-  }
-  @-webkit-keyframes blink{
-      0% { opacity:1; }
-      50% { opacity:0; }
-      100% { opacity:1; }
-  }
-  @-moz-keyframes blink{
-      0% { opacity:1; }
-      50% { opacity:0; }
-      100% { opacity:1; }
-  }
-
-<<<<<<< HEAD
->>>>>>> develop
-=======
-  .btn{
-    margin: 20px 8px 0px 8px;
-    background-color: white;
-    color: #1E1515;
-    width: 150px;
-  }
-
->>>>>>> develop
+.landing {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -9999;
+    // background-image: image-url('background1.png');
+    background-repeat: no-repeat center center-fixed;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    h2 {
+        padding-top: $padding-1;
+        font-family: $font-russo;
+        font-size: $font-size-1;
+    }
+    .element {
+        display: inline;
+        font-size: $font-size-2;
+        font-family: $font-russo;
+    }
+    .typed-cursor {
+        font-size: 40px;
+        opacity: 1;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @-webkit-keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @-moz-keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .btn {
+        margin: 20px 8px 0px 8px;
+        background-color: white;
+        color: #1E1515;
+        width: 150px;
+    }
 }
